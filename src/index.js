@@ -6,10 +6,21 @@ window.onload=function(){
     let bombs = 30;
     
     // hit ship 
-    $('#water td').on('click', function() {
-        $(this).addClass("hit");
-    })
+    if (bombs >= 1){
+        $('#water td').on('click', function() {
+            $(this).addClass("hit");
+            console.log($('td').index(this)); // index of the box
+            bombs --;
+            $('h2').text(`No. Bombs remaining: ${bombs}`)
+        })
+    } else {
+        bombs = 0;
+    }
 
+    // miss ship 
+    $('#water td').on('click', function(){
+        $(this).addClass("miss");
+    })
 
 
 
