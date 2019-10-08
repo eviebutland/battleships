@@ -21,3 +21,9 @@ tr {
 .hit {
   background-color: red;
   z-index: 1; }
+
+.miss {
+  background-color: darkblue; }
+
+.restart {
+  background-color: lightblue; }

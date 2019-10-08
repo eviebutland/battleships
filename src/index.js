@@ -1,7 +1,6 @@
 window.onload=function(){
     console.log('loaded');
 
-
     // limit clicks 
     let bombs = 30;
     
@@ -10,7 +9,7 @@ window.onload=function(){
         $('#water td').on('click', function() {
             $(this).addClass("hit");
             console.log($('td').index(this)); // index of the box
-            bombs --;
+            bombs--;
             $('h2').text(`No. Bombs remaining: ${bombs}`)
         })
     } else {
@@ -23,9 +22,9 @@ window.onload=function(){
     })
 
 
-
     $('#restart').on('click', function (){
-        console.log('restarted')
+        console.log('restarted');
+        $('#water td').addClass('restart');
     })
 
 }
