@@ -1,13 +1,54 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
+    
 
+}
+h1 {
+    text-align: center;
+}
+h4 {
+    margin: 10px;
+}
+h5 {
+    display: inline-block;
+}
+.fleet {
+    display: flex;
+    justify-content: space-between;
+  align-content: space-between;
+}
+.ships {
+    display: inline-block;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+ul {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+}
+li:hover {
+    color: red;
+}
+button{
+    display: block;
+    padding: 10px; 
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    background-color: lightblue;
+    margin: 5px auto;
+}
+li {
+    text-decoration: none;
+    list-style: none;
 }
 table {
     border: 1px solid grey; 
-    width: 500px;
-    height: 500px;
-    margin: 10px auto;
+    width: 300px;
+    height: 300px;
+    display: inline-table;
 }
 tr {
     border: 1px solid grey; 
