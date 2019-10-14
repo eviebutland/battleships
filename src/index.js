@@ -3,35 +3,41 @@ window.onload=function(){
     let hits = 0;
     let misses = 0;
 
+    generate();
     function setText(hits, misses, bombs){
-        $('#no-hits').text(`Hits: ${hits}`);
+        $('#no-hits').text(hits);
         $('#no-misses').text(`Misses: ${misses}`); 
-        $('h2').text(`No. Bombs remaining: ${bombs}`);
+        $('#no-bombs').text(`No. Bombs remaining: ${bombs}`);
     }
 
-    
+    function generate(){
+        // $('#enemy-water').createElement('td');
+        // $('#enemy-water').element('td');
+    }
+
+    // add ships
+    $('li').on('click', function (){
+        $(this).addClass('li--selected');
+        // then delete element
+    })
 
 
-    // hit ship 
-    if (bombs >= 1){
-        $('#water td').on('click', function() {
-            $(this).addClass("hit");
-            hits++
-            console.log($('td').index(this)); // index of the box
+    // miss ship -
+    if($('#enemy-water td').hasClass(!'miss')){
+        $('#enemy-water td').on('click', function() {
+            $(this).addClass("miss");
+            misses++
             bombs--;
             setText(hits, misses, bombs);
-        })  
+    })
     } else {
-        bombs = 0;
+        return;
     }
 
     $('#restart').on('click', function (){
-        console.log('restarted');
-        $('#water td').addClass('restart');
         hits = 0;
         misses = 0;
         bombs = 30;
         setText(hits, misses, bombs);
     })
-
 }

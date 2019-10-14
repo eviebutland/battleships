@@ -10,53 +10,47 @@ h4 {
 h5 {
   display: inline-block; }
 
-.fleet {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between; }
-
-.ships {
-  display: inline-block;
-  border: 1px solid lightblue;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center; }
-
-ul {
-  display: inline-block;
-  padding: 0;
-  text-align: center; }
-
-li:hover {
-  color: red; }
-
 button {
   display: block;
   padding: 10px;
-  border: 1px solid lightblue;
   border-radius: 5px;
   background-color: lightblue;
-  margin: 5px auto; }
-
-li {
-  text-decoration: none;
-  list-style: none; }
-
-table {
-  border: 1px solid grey;
-  width: 300px;
-  height: 300px;
-  display: inline-table; }
+  margin: 5px auto;
+  border: transparent; }
 
 tr {
-  border: 1px solid grey;
   z-index: 1;
   background-color: lightblue; }
 
-#restart {
-  background-color: aquamarine;
+.game {
+  display: flex;
+  align-content: center;
+  justify-content: space-around; }
+
+.fleet {
+  display: inline-block;
+  margin: 0 30px; }
+  .fleet__water {
+    border: 1px solid grey;
+    width: 300px;
+    height: 300px;
+    display: inline-table; }
+
+.container {
+  display: inline-block;
+  border: 1px solid lightblue;
+  border-radius: 5px;
   padding: 10px;
-  margin: 0 auto; }
+  text-align: center; }
+  .container ul {
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none; }
+    .container ul .li--selected {
+      color: red;
+      cursor: pointer; }
 
 .hit {
   background-color: red;
@@ -65,5 +59,5 @@ tr {
 .miss {
   background-color: darkblue; }
 
-.restart {
-  background-color: lightblue; }
+#rotate {
+  transform: rotate(180); }
