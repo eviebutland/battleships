@@ -10,10 +10,20 @@ window.onload=function(){
         $('#no-bombs').text(`No. Bombs remaining: ${bombs}`);
     }
 
+    
+    
     function generate(){
-        // $('#enemy-water').createElement('td');
-        // $('#enemy-water').element('td');
+        column = '<td></td>';
+        let timesTen = column.repeat(10)
+        let startRow = '<tr>';
+        let endRow = '</tr>';
+        let finished = startRow+= timesTen += endRow; 
+    
+        for(i = 0; i <= 10; i++ ){
+            $('.fleet__water').append(finished) // one td in row 
+        }
     }
+    
 
     // add ships
     $('li').on('click', function (){
