@@ -36,6 +36,9 @@ tr {
     height: 300px;
     display: inline-table; }
 
+#enemy-water {
+  cursor: url("../scope-icon.png"); }
+
 .container {
   display: inline-block;
   border: 1px solid lightblue;

@@ -18,6 +18,9 @@
         display: inline-table; 
     }
 }
+#enemy-water {
+    cursor: url('../scope-icon.png');
+}
 .container {
     display: inline-block;
     border: 1px solid $main-colour;
@@ -42,6 +45,7 @@
         }
     }
 }
+
 #draggablehelper {
     background-color: red;
     width: 30px; 
@@ -56,7 +60,4 @@
 }
 #rotate{
     transform: rotate(180);
-}
-.shoot{
-    cursor: url('../scope-icon.png'), auto;
 }
