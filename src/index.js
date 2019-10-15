@@ -4,7 +4,7 @@ window.onload=function(){
     let misses = 0;
 
     generate();
-
+    
     function setText(hits, misses, bombs){
         $('#no-hits').text(hits);
         $('#no-misses').text(`Misses: ${misses}`); 
@@ -23,27 +23,22 @@ window.onload=function(){
     }
 
     // add ships
-    // $('li').on('click', function (){
-    //     $(this).addClass('li--selected');
-    //     // then delete element
-    // })
-    $( dragAndDrop);
+    $( function dragAndDrop() {
+        $('.drag-me').draggable();
+    });
 
-    function dragAndDrop() {
-        $('.drag-me').draggable({helper: myHelper, stop: handleDragStop});
-    };
-  
+    $('#your-water').mouseenter(function(){
+        console.log('entered');
+        $(this).addClass('miss')
+    });
 
-
-    function myHelper(event){
-        return '<div id="draggableHelper">Box</div>';
-    }
     // miss ship -
     $('#enemy-water td').on('click', function() {
         $(this).addClass("miss");
         misses++
         bombs--;
         setText(hits, misses, bombs);
+
     })
 
     $('#restart').on('click', function (){

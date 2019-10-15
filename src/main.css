@@ -41,8 +41,7 @@ tr {
   border: 1px solid lightblue;
   border-radius: 5px;
   padding: 10px;
-  text-align: center;
-  cursor: move; }
+  text-align: center; }
   .container ul {
     display: inline-block;
     padding: 0;
@@ -55,6 +54,11 @@ tr {
       .container ul .li--selected {
         color: red;
         cursor: move; }
+
+#draggablehelper {
+  background-color: red;
+  width: 30px;
+  height: 30px; }
 
 .hit {
   background-color: red;
