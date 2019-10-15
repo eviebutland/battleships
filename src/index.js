@@ -4,14 +4,12 @@ window.onload=function(){
     let misses = 0;
 
     generate();
+
     function setText(hits, misses, bombs){
         $('#no-hits').text(hits);
         $('#no-misses').text(`Misses: ${misses}`); 
         $('#no-bombs').text(`No. Bombs remaining: ${bombs}`);
     }
-
-    
-    
     function generate(){
         column = '<td></td>';
         let timesTen = column.repeat(10)
@@ -23,26 +21,30 @@ window.onload=function(){
             $('.fleet__water').append(finished) // one td in row 
         }
     }
-    
 
     // add ships
-    $('li').on('click', function (){
-        $(this).addClass('li--selected');
-        // then delete element
-    })
+    // $('li').on('click', function (){
+    //     $(this).addClass('li--selected');
+    //     // then delete element
+    // })
+    $( dragAndDrop);
+
+    function dragAndDrop() {
+        $('.drag-me').draggable({helper: myHelper, stop: handleDragStop});
+    };
+  
 
 
-    // miss ship -
-    if($('#enemy-water td').hasClass(!'miss')){
-        $('#enemy-water td').on('click', function() {
-            $(this).addClass("miss");
-            misses++
-            bombs--;
-            setText(hits, misses, bombs);
-    })
-    } else {
-        return;
+    function myHelper(event){
+        return '<div id="draggableHelper">Box</div>';
     }
+    // miss ship -
+    $('#enemy-water td').on('click', function() {
+        $(this).addClass("miss");
+        misses++
+        bombs--;
+        setText(hits, misses, bombs);
+    })
 
     $('#restart').on('click', function (){
         hits = 0;

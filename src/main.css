@@ -41,16 +41,20 @@ tr {
   border: 1px solid lightblue;
   border-radius: 5px;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  cursor: move; }
   .container ul {
     display: inline-block;
     padding: 0;
     text-align: center;
     text-decoration: none;
-    list-style: none; }
-    .container ul .li--selected {
-      color: red;
-      cursor: pointer; }
+    list-style: none;
+    cursor: move; }
+    .container ul .li {
+      cursor: move; }
+      .container ul .li--selected {
+        color: red;
+        cursor: move; }
 
 .hit {
   background-color: red;

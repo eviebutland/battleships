@@ -31,11 +31,12 @@
         text-align: center;
         text-decoration: none;
         list-style: none;
-
+        
         .li {
+            cursor: move;
             &--selected {
                 color: $ship-hit;
-                cursor: pointer;
+                cursor: move;
             }
         }
     }
